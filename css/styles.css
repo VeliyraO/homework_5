@@ -88,6 +88,8 @@ img {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  animation-duration: 1000ms;
+  animation-iteration-count: 3;
 }
 
 .current:visited {
@@ -115,7 +117,10 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: var(--white-accent);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
+
 .social-list-link-footer {
   display: flex;
   justify-content: center;
@@ -124,6 +129,8 @@ img {
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link-footer:hover,
@@ -186,6 +193,8 @@ img {
   padding-left: 20px;
   padding-right: 20px;
   color: var(--title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -202,6 +211,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-header:last-child {
@@ -454,6 +465,8 @@ img {
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list-icon {
@@ -505,6 +518,8 @@ img {
   border: none;
   padding: 6px 20px;
   min-width: 145px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-selection:hover,
@@ -541,12 +556,13 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover,
 .portfolio-list-item:focus {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+  border: 1px solid #eeeeee; 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
