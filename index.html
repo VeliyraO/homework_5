@@ -20,13 +20,13 @@
               <a class="logo-link link" href="" lang="en"> Web<span class="logo-dark">Studio</span></a>
                <ul class="navigation-list list">
                    <li class="navigation-item">
-                      <a class="navigation-link link current" href="./index.html">Студия</a>
+                      <a class="navigation-link link current home-page" href="./index.html">Студия</a>
                    </li>
                    <li class="navigation-item">
-                      <a class="navigation-link link " href="./portfolio.html">Портфолио</a>
+                      <a class="navigation-link link home-page" href="./portfolio.html">Портфолио</a>
                    </li>
                    <li class="navigation-item">
-                       <a class="navigation-link link" href="">Контакты</a>
+                       <a class="navigation-link link home-page" href="">Контакты</a>
                    </li>
                </ul>
            </nav>
@@ -51,7 +51,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>            
         </section>
         <!--ADVANTAGE-->
@@ -109,13 +109,16 @@
                 <ul class="gallery-list list">
                     <li class="gallery-list-item">
                         <img class="gallery-list-img" src="./image/gallery/gallery_1.jpg" alt="набор текста" width="370" height="294">
+                        <h2 class="gallery-list-title">Десктопные приложения</h2>
                     </li>
                     <li class="gallery-list-item">
                         <img class="gallery-list-img" src="./image/gallery/gallery_2.jpg" alt="меню телефона" width="370" height="294">
+                        <h2 class="gallery-list-title">Мобильные приложения</h2>
                     </li>
                     <li class="gallery-list-item">
                         <img class="gallery-list-img" src="./image/gallery/gallery_3.jpg" alt="планшет с цветовыми решениями"
                             width="370" height="294">
+                        <h2 class="gallery-list-title">Дизайнерские решения</h2>
                     </li>
                 </ul>
             </div>            
@@ -378,5 +381,16 @@
             
         </div>        
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="icon-vector" width="11" height="11">
+                    <use href="./image/sprite.svg#icon-vector"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

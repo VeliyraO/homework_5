@@ -98,6 +98,7 @@ img {
 
 .social-list-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-icon-footer {
   fill: var(--white-accent);
@@ -118,7 +119,7 @@ img {
   border-radius: 50%;
   background-color: var(--white-accent);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),;  
 }
 
 .social-list-link-footer {
@@ -248,6 +249,11 @@ img {
 .contact-link-header:hover .icon-e-mail,
 .contact-link-header:focus .icon-e-mail {
   fill: var(--accent-color);
+}
+
+.home-page:hover,
+.home-page:focus {
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ============= END HEADER ============= */
@@ -385,6 +391,19 @@ img {
   margin-top: 30px;
 }
 
+.gallery-list-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-accent);
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px 82px;  
+}
+
 /* ============= END GALLERY ============= */
 
 /* ============= SELECTION MASTERS ============= */
@@ -466,11 +485,12 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-link:hover,
 .client-list-link:focus {
@@ -678,3 +698,44 @@ img {
 }
 
 /* ============= END FOOTER ============= */
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 580px;
+  background-color: var(--white-accent);
+  border-radius: 4px;
+
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
